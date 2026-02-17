@@ -79,11 +79,3 @@ export async function RegisterService(data) {
   }
 }
 
-<<<<<<< HEAD
-=======
-export function validateTokenService(token) {
-  // console.log(token)
-  const validtedToken = jwt.verify(token, process.env.TOKEN_KEY);
-  return validtedToken.message;
-}
->>>>>>> 0cf965408d41899ef67dbdbe927a64404d38cb59
