@@ -1,11 +1,13 @@
 import express from 'express'
-import {LoginController, validateTokenController} from '../controllers/user.controller.js'
+import {LoginController} from '../controllers/user.controller.js'
+// import { PruebaMiddleware } from '../services/token.service.js';
+import {appMiddleware} from '../middleware/app.middleware.js'
 
 const router= express.Router();
 router.use(express.json())
 
-router.post('/login', LoginController)
+router.post('/login', appMiddleware ,LoginController)
 
-router.post('/validatetoken', validateTokenController)
+
 
 export default router
