@@ -72,6 +72,7 @@ export async function RegisterService(data) {
       message: "Usuario registrado",
     };
   } catch (e) {
+    console.log(e)
     return {
       status: 400,
       message: "Error en la base de datos",
